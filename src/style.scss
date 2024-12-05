@@ -1,2 +1,6 @@
-@import 'null';
-@import 'fonts';
+@use 'null';
+@use 'fonts';
+
+body {
+    background: linear-gradient(to right, #F2F4EF, #54A1B4);
+}
