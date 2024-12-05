@@ -32,7 +32,7 @@ window.onload = function () {
         }, {
             y: 0,
             opacity: 1,
-            delay: 3
+            delay: 1.5
         })
         gsap.fromTo('.cross_el_2', {
             y: 100,
@@ -40,17 +40,8 @@ window.onload = function () {
         }, {
             y: 0,
             opacity: 1,
-            delay: 3
+            delay: 1.5
         })
-        gsap.fromTo('.cross_el_2', {
-            y: 100,
-            opacity: 0,
-        }, {
-            y: 0,
-            opacity: 1,
-            delay: 3
-        })
-
 
         gsap.to('.hero_content_text', {
             text: "CRABADA IS BACK MUTHERFUCKERS, AND WE ARE CTO'ING THIS BICH BACK OUT OF THE TRENCHES.",
@@ -64,10 +55,12 @@ window.onload = function () {
             }
         });
         gsap.fromTo('.hero_decor_1', {
-            y: -200,
+            // y: -200,
             opacity: 0,
+            scale: 0.2
         }, {
-            y: 0,
+            scale: 1,
+            // y: 0,
             opacity: 1,
             ease: "none",
             scrollTrigger: {
@@ -80,10 +73,12 @@ window.onload = function () {
         });
 
         gsap.fromTo('.hero_decor_2', {
-            y: 200,
+            // y: 200,
+            scale: 0.2,
             opacity: 0,
         }, {
-            y: 0,
+            scale: 1,
+            // y: 0,
             opacity: 1,
             ease: "none",
             scrollTrigger: {
