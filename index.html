@@ -3,19 +3,174 @@
 
 <head>
   <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <link rel="icon" type="image/png" href="/img/logo.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Crabada</title>
+
+
+  <style>
+    .loader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 999;
+      background: linear-gradient(to right, #F2F4EF, #54A1B4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 48px;
+      color: #000;
+      font-family: Arial, sans-serif;
+      letter-spacing: 5px;
+      transition: 500ms opacity;
+    }
+
+    .loader span {
+      display: inline-block;
+      animation: wave 1.5s infinite;
+      color: #000;
+      animation-delay: calc(0.1s * var(--i));
+    }
+
+    .loader span:nth-child(1) {
+      --i: 1;
+    }
+
+    .loader span:nth-child(2) {
+      --i: 2;
+    }
+
+    .loader span:nth-child(3) {
+      --i: 3;
+    }
+
+    .loader span:nth-child(4) {
+      --i: 4;
+    }
+
+    .loader span:nth-child(5) {
+      --i: 5;
+    }
+
+    .loader span:nth-child(6) {
+      --i: 6;
+    }
+
+    .loader span:nth-child(7) {
+      --i: 7;
+    }
+
+    @keyframes wave {
+
+      0%,
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+
+      50% {
+        transform: translateY(15px) rotate(20deg);
+        opacity: 0.1;
+      }
+    }
+  </style>
+
 </head>
 
+
 <body>
+  <div class="loader" id="loader">
+    <span>C</span><span>R</span><span>A</span><span>B</span><span>A</span><span>D</span><span>A</span>
+  </div>
   <div class="app">
     <div class="mail">
-      <div class="mail_inner">
-        Meiw
+      <div class="cross free_img">
+        <div class="cross_el free_img cross_el_1">
+          <div class="cross_el_inner"></div>
+        </div>
+        <div class="cross_el free_img cross_el_2">
+          <div class="cross_el_inner "></div>
+        </div>
+      </div>
+      <div class="free_img mail_wrapper">
+        <div class="mail_inner">
+          Dear Crabada Community,
+          <br><br>
+          We have reached a point where we must make the difficult decision to sunset operations of the Crabada Battle
+          Game and Swimmer Network.
+          <br><br>
+          Throughout the past year and a half, we've shared a fantastic journey, growing into a thriving community and
+          witnessing the growth of Crabada. Your passion is what makes Crabada truly unique, and we want to thank
+          each and everyone in our incredible #snibsnib community.
+          <br><br>
+          We want to extend our appreciation to everyone who supported, partnered, and played during this journey.
+          Your passion has inspired us, and we are immensely grateful for the chance to share experiences with all of
+          you.
+          <br>
+          <br>
+          Sincerely,
+          <br>
+          The Crabada Team
+        </div>
+      </div>
+    </div>
+    <div class="hero">
+      <div class="header">
+        <img src='/img/logo.png' class="header_logo" alt='decor'>
+        CRABADA
+        <div class="header_links">
+          <a href="#" class="header_links_element">
+            <img src='/img/tg.svg' alt='decor'>
+          </a>
+          <a href="#" class="header_links_element">
+            <img src='/img/x.svg' alt='decor'>
+          </a>
+          <a href="#" class="header_links_element">
+            <img src='/img/dex.svg' alt='decor'>
+          </a>
+        </div>
+      </div>
+      <div class="hero_inner">
+        <div class="hero_content">
+          <div class="hero_content_text">
+            <!-- CRABADA IS BACK MUTHERFUCKERS, AND WE ARE CTO'ING THIS BICH BACK OUT OF THE TRENCHES. -->
+          </div>
+          <a href="#" class="hero_content_btn">
+            CHECK IT OUT!
+          </a>
+        </div>
+        <div class="hero_decor">
+          <div class="free_img hero_decor_1">
+            <img src='/img/heroDec1.jpg' alt='decor'>
+          </div>
+          <div class="free_img hero_decor_2">
+            <img src='/img/heroDec2.jpg' alt='decor'>
+          </div>
+        </div>
       </div>
     </div>
 
+    <div class="ycb">
+      <div class="ycb_inner">
+        <div class="ycb_header">
+          YOU CAN BUY IT HERE
+        </div>
+        <div class="ycb_subheader">
+          Solana Smart Contract
+        </div>
+        <div class="ycb_ca" id="ca">
+          xxx
+        </div>
+        <div class="ycb_copy" id="ycb_copy">
+          COPY
+        </div>
+      </div>
+      <div class="ycb_img">
+        <img src='/img/footer.png' alt='decor'>
+      </div>
+    </div>
   </div>
   <script type="module" src="/src/main.js"></script>
 </body>
