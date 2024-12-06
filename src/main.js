@@ -54,45 +54,37 @@ window.onload = function () {
                 end: `30% 50%`,
             }
         });
-        gsap.fromTo('.hero_decor_1', {
-            // y: -200,
-            opacity: 0,
-            scale: 0.2
-        }, {
-            scale: 1,
-            // y: 0,
-            opacity: 1,
-            ease: "none",
-            scrollTrigger: {
-                trigger: '.hero',
-                scrub: 1,
-                // markers: true,
-                start: `20% 50%`,
-                end: `21% 50%`,
-            }
-        });
 
-        gsap.fromTo('.hero_decor_2', {
-            // y: 200,
-            scale: 0.2,
-            opacity: 0,
-        }, {
-            scale: 1,
-            // y: 0,
-            opacity: 1,
-            ease: "none",
-            scrollTrigger: {
-                trigger: '.hero',
-                scrub: 1,
-                // markers: true,
-                start: `35% 50%`,
-                end: `35% 50%`,
-            }
-        });
+        const elements = document.querySelectorAll('.hero_decor_el');
+        let zIndexCounter = 1; // Глобальный счетчик z-index
+        let currentIndex = 0; // Текущий индекс элемента для анимации
 
+        // Функция для запуска анимации элемента
+        function animateElement() {
+            const el = elements[currentIndex]; // Берём текущий элемент
 
+            // Увеличиваем zIndex и применяем его
+            el.style.zIndex = zIndexCounter++;
 
+            // Анимация с GSAP
+            gsap.fromTo(el,
+                {
+                    opacity: 0,
+                    scale: 2
+                },
+                {
+                    scale: 1,
+                    opacity: 1,
+                    ease: "easeOut",
+                }
+            );
 
+            // Переходим к следующему элементу
+            currentIndex = (currentIndex + 1) % elements.length; // Возвращаемся к первому элементу после последнего
+        }
+
+        // Запускаем анимацию с интервалом
+        setInterval(animateElement, 1000);
 
     }, 500);
 };
