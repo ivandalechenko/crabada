@@ -3,7 +3,7 @@ import gsap from 'gsap';
 import { MotionPathPlugin, ScrollTrigger, TextPlugin } from 'gsap/all';
 gsap.registerPlugin(ScrollTrigger, MotionPathPlugin, TextPlugin)
 // const CA = '4gN9Fk7Chf9RGNghzVaKddhMZ1zF79kxKds4xQtefpwx'
-const CA = 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
+const CA = 'AuVdSB5SxAkrH7pRYiuFfTz5tyJmzG8JSQ3ZC23dpump'
 
 
 
